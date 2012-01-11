@@ -267,4 +267,4 @@ class Compressor(object):
         post_compress.send(sender='django-compressor', type=self.type,
                            mode=mode, context=final_context)
         return render_to_string("compressor/%s_%s.html" %
-                                (self.type, mode), final_context)
+                                (self.type, mode), {}, final_context)
